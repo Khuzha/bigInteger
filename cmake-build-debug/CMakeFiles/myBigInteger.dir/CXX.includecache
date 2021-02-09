@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/khuzha/projects/myBigInteger/BigInteger.cpp
+BigInteger.h
+/home/khuzha/projects/myBigInteger/BigInteger.h
+
+/home/khuzha/projects/myBigInteger/BigInteger.h
+
+/home/khuzha/projects/myBigInteger/main.cpp
+iostream
+-
+

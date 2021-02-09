@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/myBigInteger.dir/main.cpp.o CMakeFiles/myBigInteger.dir/BigInteger.cpp.o  -o myBigInteger 
