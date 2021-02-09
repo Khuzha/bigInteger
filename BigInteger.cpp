@@ -16,7 +16,6 @@ BigInteger::BigInteger(const char *str)
 
     for (size_t i = 0; i < len; i++) {
         value.push_back(str[i]);
-        std::cout << value.at(i);
     }
     std::cout << std::endl;
 }
