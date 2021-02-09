@@ -7,12 +7,16 @@
 #IncludeRegexTransform: 
 
 /home/khuzha/projects/myBigInteger/BigInteger.cpp
+cstring
+-
+iostream
+-
 BigInteger.h
 /home/khuzha/projects/myBigInteger/BigInteger.h
 
 /home/khuzha/projects/myBigInteger/BigInteger.h
-
-/home/khuzha/projects/myBigInteger/main.cpp
-iostream
+string
+-
+vector
 -
 

@@ -4,5 +4,6 @@
 CMakeFiles/myBigInteger.dir/BigInteger.cpp.o: ../BigInteger.cpp
 CMakeFiles/myBigInteger.dir/BigInteger.cpp.o: ../BigInteger.h
 
+CMakeFiles/myBigInteger.dir/main.cpp.o: ../BigInteger.h
 CMakeFiles/myBigInteger.dir/main.cpp.o: ../main.cpp
 
