@@ -20,3 +20,9 @@ string
 vector
 -
 
+/home/khuzha/projects/myBigInteger/main.cpp
+iostream
+-
+BigInteger.h
+/home/khuzha/projects/myBigInteger/BigInteger.h
+

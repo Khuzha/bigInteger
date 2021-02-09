@@ -9,14 +9,15 @@ using byte = unsigned char;
 class BigInteger {
 private:
     std::vector<byte> value;
-    bool isPositiv;
+    bool isPositive;
 
 public:
-    BigInteger(const char *value);
-    size_t getLength()
-    {
-        return value.size();
-    }
+    BigInteger(const char *str);
+
+    std::vector<byte> getValue();
+    bool validateString(const char *str);
+    size_t getLength();
+    void add(BigInteger term);
 };
 
 
