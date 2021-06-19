@@ -56,6 +56,6 @@ void add(BigInteger term)
 }
 
 BigInteger operator + (const BigInteger term2) {
-    BigInteger term1 = term1(*this);
+    BigInteger term1 = this;
 
 }

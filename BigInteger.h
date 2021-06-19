@@ -18,6 +18,7 @@ public:
     bool validateString(const char *str);
     size_t getLength();
     void add(BigInteger term);
+    BigInteger operator + (const BigInteger term2);
 };
 
 #endif 
