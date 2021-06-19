@@ -20,5 +20,4 @@ public:
     void add(BigInteger term);
 };
 
-
-#endif
+#endif 

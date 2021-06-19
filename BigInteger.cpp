@@ -4,7 +4,7 @@
 
 BigInteger::BigInteger(const char *str)
 {
-    if (!validateString(str)) {
+    if (!this->validateString(str)) {
         throw std::string("Invalid string given: it's not a number");
     }
     if (*str == '-')
@@ -37,6 +37,7 @@ bool BigInteger::validateString(const char *str)
             return false;
         }
     }
+
     return true;
 }
 
@@ -52,4 +53,9 @@ void add(BigInteger term)
     {
         std::cout << newValue.at(i);
     }
+}
+
+BigInteger operator + (const BigInteger term2) {
+    BigInteger term1 = term1(*this);
+
 }
