@@ -62,3 +62,8 @@ bool BigInteger::operator > (BigInteger num2obj)
 
   return false;
 }
+
+bool BigInteger::operator < (BigInteger num2obj)
+{
+  return !(*this > num2obj);
+}

@@ -3,10 +3,10 @@
 
 int main() {
     try {
-        BigInteger mybigint = BigInteger("123");
+        BigInteger mybigint = BigInteger("122");
         // std::cout << "lenght = " << mybigint.getLength() << std::endl;
         BigInteger other = BigInteger("123");
-        std::cout << "compare result = " << (mybigint > other) << std::endl;
+        std::cout << "compare result = " << (mybigint < other) << std::endl;
         // BigInteger sum = mybigint + other;
         // mybigint.printValue();
         // other.printValue();
