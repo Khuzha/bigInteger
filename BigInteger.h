@@ -21,8 +21,8 @@ public:
     size_t getLength();
     void printValue();
     std::string convertIntVectorToString(std::vector<int>);
-    void add(BigInteger term);
     BigInteger operator + (const BigInteger term2);
+    bool operator > (const BigInteger num2obj);
 };
 
 #endif 
