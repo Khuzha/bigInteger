@@ -8,15 +8,19 @@ using byte = unsigned char;
 
 class BigInteger {
 private:
-    std::vector<byte> value;
+    std::vector<int> value;
     bool isPositive;
 
 public:
     BigInteger(const char *str);
+    BigInteger(std::vector<int> value, bool isPositive);
 
-    std::vector<byte> getValue();
-    bool validateString(const char *str);
+    std::vector<int> getValue();
+    bool validateValue(const char *str);
+    bool validateValue(std::vector<int> value);
     size_t getLength();
+    void printValue();
+    std::string convertIntVectorToString(std::vector<int>);
     void add(BigInteger term);
     BigInteger operator + (const BigInteger term2);
 };

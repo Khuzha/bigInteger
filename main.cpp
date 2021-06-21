@@ -3,7 +3,13 @@
 
 int main() {
     try {
-        BigInteger mybigint("-1212321342904238598347598347583495734985734985739485sd79834782048058093458093405984309583049850394859034805349058430958093485039423843242343249820384093");
+        BigInteger mybigint = BigInteger("123");
+        // std::cout << "lenght = " << mybigint.getLength() << std::endl;
+        BigInteger other = BigInteger("111");
+        BigInteger sum = mybigint + other;
+        // mybigint.printValue();
+        // other.printValue();
+        // sum.printValue();
     } catch (std::string error) {
         std::cout << error;
     }
