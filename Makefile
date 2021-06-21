@@ -1,3 +1,3 @@
 all:
-	g++ main.cpp initialization.cpp utils.cpp operators.cpp
+	g++ main.cpp srcs/*.cpp srcs/operators/*.cpp
 	
