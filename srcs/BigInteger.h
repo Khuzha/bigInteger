@@ -23,6 +23,7 @@ public:
     std::string convertIntVectorToString(std::vector<int>);
 
     BigInteger operator + (const BigInteger term2);
+    BigInteger operator - (const BigInteger term2);
     bool operator == (const BigInteger num2obj);
     bool operator > (const BigInteger num2obj);
     bool operator < (const BigInteger num2obj);
