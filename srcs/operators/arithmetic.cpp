@@ -18,7 +18,7 @@ BigInteger BigInteger::operator + (BigInteger term2obj)
         int term2 = len2 > i ? num2[i] : 0;
         tmp = 0;
 
-        int sum = term1 + term2;
+        int sum = std::abs(term2obj.isPositive ? term1 + term2 : term1 - term2);
         if (sum >= 10)
         {
           sum -= 10;
@@ -32,17 +32,28 @@ BigInteger BigInteger::operator + (BigInteger term2obj)
     if (tmp)
       result.push_back(tmp);
 
-    // std::cout << "term1: ";
-    // this->printValue();
-    // std::cout << "term2: ";
-    // term2obj.printValue();
-    // std::cout << "sum:   ";
+    if (!term2obj.isPositive)
+    {
+      BigInteger temp = term2obj;
+      temp.isPositive = true;
+      isPositive = *this > temp;
+    }
 
-    // for (auto i = result.end() - 1; i >= result.begin(); --i)
-    // {
-    //     std::cout << *i;
-    // }
-    // std::cout << std::endl;
+    std::cout << "term1: ";
+    this->printValue();
+    std::cout << "term2: ";
+    term2obj.printValue();
+    std::cout << "sum:   ";
+
+    if (!isPositive)
+    {
+      std::cout << "-";
+    }
+    for (auto i = result.end() - 1; i >= result.begin(); --i)
+    {
+        std::cout << *i;
+    }
+    std::cout << std::endl;
 
     return BigInteger(result, isPositive);
 }
@@ -58,10 +69,6 @@ BigInteger BigInteger::operator - (BigInteger term2obj)
     {
       int diff;
 
-      if (minuend[i] == 0 && i >= 1)
-      {
-        diff = minuend[i - 1]
-      }
       if (minuend[i] >= subtrahend[i])
       {
         diff = minuend[i] - subtrahend[i];

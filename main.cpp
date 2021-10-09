@@ -5,7 +5,7 @@ int main() {
     try {
         BigInteger mybigint = BigInteger("11");
         // std::cout << "lenght = " << mybigint.getLength() << std::endl;
-        BigInteger other = BigInteger("22");
+        BigInteger other = BigInteger("9");
         // std::cout << "compare result = " << (mybigint == other) << std::endl;
         BigInteger sum = mybigint - other;
         // mybigint.printValue();

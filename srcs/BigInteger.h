@@ -9,9 +9,9 @@ using byte = unsigned char;
 class BigInteger {
 private:
     std::vector<int> value;
-    bool isPositive;
 
 public:
+    bool isPositive;
     BigInteger(const char *str);
     BigInteger(std::vector<int> value, bool isPositive);
 
