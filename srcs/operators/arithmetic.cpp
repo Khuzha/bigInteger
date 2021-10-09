@@ -24,7 +24,7 @@ BigInteger BigInteger::operator + (BigInteger term2obj)
           sum -= 10;
           tmp = 1;
         }
-        std::cout << "term1[i] = " << term1 << ", term2[i] = " << term2 << ", sum = " << sum << ", tmp = " << tmp << std::endl;
+        // std::cout << "term1[i] = " << term1 << ", term2[i] = " << term2 << ", sum = " << sum << ", tmp = " << tmp << std::endl;
 
         result.push_back(sum);
     }
@@ -32,17 +32,17 @@ BigInteger BigInteger::operator + (BigInteger term2obj)
     if (tmp)
       result.push_back(tmp);
 
-    std::cout << "term1: ";
-    this->printValue();
-    std::cout << "term2: ";
-    term2obj.printValue();
-    std::cout << "sum:   ";
+    // std::cout << "term1: ";
+    // this->printValue();
+    // std::cout << "term2: ";
+    // term2obj.printValue();
+    // std::cout << "sum:   ";
 
-    for (auto i = result.end() - 1; i >= result.begin(); --i)
-    {
-        std::cout << *i;
-    }
-    std::cout << std::endl;
+    // for (auto i = result.end() - 1; i >= result.begin(); --i)
+    // {
+    //     std::cout << *i;
+    // }
+    // std::cout << std::endl;
 
     return BigInteger(result, isPositive);
 }
@@ -53,20 +53,34 @@ BigInteger BigInteger::operator - (BigInteger term2obj)
     std::vector<int> subtrahend = term2obj.getValue();
     std::vector<int> result;
     bool isPositive = true;
-    int tmp = 0;
 
     for (std::vector<int>::size_type i = 0; i != minuend.size(); i++)
     {
-        minuend[i] -= tmp;
-        tmp = 0;
-        int diff = minuend[i] - subtrahend[i];
-        
-        if (diff < 0)
+      int diff;
+
+      if (minuend[i] == 0 && i >= 1)
+      {
+        diff = minuend[i - 1]
+      }
+      if (minuend[i] >= subtrahend[i])
+      {
+        diff = minuend[i] - subtrahend[i];
+      }
+      else
+      {
+        int debt;
+        if (i + 1 < minuend.size())
         {
-          tmp = diff;
-          diff = 0;
+          debt = 10;
+          minuend[i + 1]--;
+        } else {
+          debt = 0;
         }
-        result.push_back(diff);
+
+        diff = debt + minuend[i] - subtrahend[i];
+        std::cout << "minuend = " << minuend[i] + debt << ", subtrahend = " << subtrahend[i] << ", diff = " << diff << std::endl;
+      }
+      result.push_back(diff);
     }
 
     std::cout << "minuend: ";

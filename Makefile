@@ -1,2 +1,2 @@
 all:
-	g++ main.cpp srcs/*.cpp srcs/operators/*.cpp
+	g++ -Ofast main.cpp srcs/*.cpp srcs/operators/*.cpp

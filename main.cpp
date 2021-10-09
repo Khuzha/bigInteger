@@ -3,11 +3,11 @@
 
 int main() {
     try {
-        BigInteger mybigint = BigInteger("99999999999999999999999999999999999999999999999999999");
+        BigInteger mybigint = BigInteger("11");
         // std::cout << "lenght = " << mybigint.getLength() << std::endl;
-        BigInteger other = BigInteger("1");
+        BigInteger other = BigInteger("22");
         // std::cout << "compare result = " << (mybigint == other) << std::endl;
-        BigInteger sum = mybigint + other;
+        BigInteger sum = mybigint - other;
         // mybigint.printValue();
         // other.printValue();
         // sum.printValue();
